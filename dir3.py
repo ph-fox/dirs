@@ -1,5 +1,7 @@
 import requests, threading, time, random, optparse, sys, random
 from colorama import Fore, Style
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 parser = optparse.OptionParser()
 parser.add_option('-u','--url',dest='url',help='target url')
